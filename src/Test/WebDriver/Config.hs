@@ -91,6 +91,8 @@ instance WebDriverConfig WDConfig where
                        , wdSessHist = []
                        , wdSessHistUpdate = wdHistoryConfig
                        , wdSessHTTPManager = manager
-                       , wdSessHTTPRetryCount = wdHTTPRetryCount }
+                       , wdSessHTTPRetryCount = wdHTTPRetryCount
+                       , wdSessCreateResponse = Nothing
+                       }
       where
         createManager = liftBase $ newManager defaultManagerSettings
